@@ -5,7 +5,7 @@ Write amazing documents without pandoc or LaTeX!!!
 # Goals
 
 + Provide markdown-style syntax for writting roff documents.
-+ Be simple and easily pipeable (don't judge my spelling).
++ Be simple and easily pipeable.
 + Cover most, if not, all the roff syntax in markdown. 
 
 ### Why I wrote this
@@ -28,13 +28,19 @@ That's where this program comes in.
 You write your program using markdown-style syntax, and the program will
 convert that into a valid roff document, which is then piped to the family of
 roff commands.  Simple!!  Write that paper without looking at a nearly 50 year
-old ugly markup language.
+old ugly markup language.  This will be designed to be used at the start of 
+your roff pipe.
 
 ### Why markdown?
 
 From the place where [markdown was birthed][1]:
 
 > Markdown is intended to be as easy-to-read and easy-to-write as is feasible.
+
+### Why python?
+
+To be quite frank, it's the only language I'm really comfortable in.  I'll
+write this in Go or C once I get good at either language.  But I am going to
 
 Why reinvent the wheel?
 

@@ -12,7 +12,8 @@ conversions = {
 		6: '.NH 6',
 	},
 	'\n': '.PP',
-	
+	'**': '.B',
+	'*' : '.I',
 }
 
 def _sect_heading(line):
@@ -45,6 +46,7 @@ def _main_parse(line)
 def _parse_line(line)
 	# TODO: parse document for bold text
 	print(line)
+
 
 def arg_parser():
 	parser = argparse.ArgumentParser(description='Easily convert markdown into troff.')

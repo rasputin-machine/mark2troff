@@ -29,7 +29,8 @@ You write your program using markdown-style syntax, and the program will
 convert that into a valid roff document, which is then piped to the family of
 roff commands.  Simple!!  Write that paper without looking at a nearly 50 year
 old ugly markup language.  This will be designed to be used at the start of 
-your roff pipe.
+your roff pipe.  Oh, and did I mention it's going to use structural regular
+expressions?
 
 ### Why markdown?
 

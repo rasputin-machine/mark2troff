@@ -1,4 +1,4 @@
-# mark2roff
+# mark2troff
 
 Write amazing documents without pandoc or LaTeX!!!
 

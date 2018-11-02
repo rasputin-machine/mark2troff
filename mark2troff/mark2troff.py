@@ -28,7 +28,8 @@ def convert(in_file):
 		lines = f.readlines()
 	lines = [l.strip() for l in lines]
 	
-	for line in lines:
+	for i, line in enumerate(lines):
+		if 
 		_main_parse(line)
 
 def _main_parse(line)
@@ -42,7 +43,8 @@ def _main_parse(line)
 		_parse_line(line)
 		
 def _parse_line(line)
-	pass
+	# TODO: parse document for bold text
+	print(line)
 
 def arg_parser():
 	parser = argparse.ArgumentParser(description='Easily convert markdown into troff.')

@@ -12,9 +12,10 @@ conversions = {
 		6: '.NH 6',
 	},
 	'\n': '.PP',
+	
 }
 
-def _print_header(line):
+def _sect_heading(line):
 	line_list = line.split()
 	header_level = len(line_list[0])
 	header_title = ''.join(line_list[1:])
@@ -28,28 +29,31 @@ def convert(in_file):
 	lines = [l.strip() for l in lines]
 	
 	for line in lines:
-		if line == '':
-			print(conversions['\n'])
-		elif line[0] == '#':
-			_print_header(line)
-		else:
-			print(line)
-	
-				
+		_main_parse(line)
 
+def _main_parse(line)
+	# first take care of section headers
+	if line[0] == '#':
+		_sect_heading(line)
+	# then we do all the other parsing
+	elif line == '':
+		print(conversions['\n'])
+	else:
+		_parse_line(line)
+		
+def _parse_line(line)
+	pass
 
 def arg_parser():
-	parser = argparse.ArgumentParser(
-		description='Easily convert markdown into troff.'
-	)
-
+	parser = argparse.ArgumentParser(description='Easily convert markdown into troff.')
 	parser.add_argument('file', type=str)
 	return parser
 
-
-if __name__ == '__main__':
+def main():
 	parser = arg_parser()
 	args = vars(parser.parse_args())
 
 	convert(args['file'])
 
+if __name__ == '__main__':
+	main()
